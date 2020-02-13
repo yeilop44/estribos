@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white" >
+    <a class="navbar-brand" href="#"><b>Estribos</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active" routerLinkActive="active">  
+            <div>
+                <a class="nav-link" [routerLink]="['rebano']">
+                    <div class="text-center">
+                        <i class="fas fa-horse fa-lg"></i>
+                    </div> 
+                    Rebaño
+                </a>
+            </div>          
+        </li>
+        <li class="nav-item active" routerLinkActive="active">  
+            <div>
+                <a class="nav-link" [routerLink]="['eventos']">
+                    <div class="text-center">                     
+                        <i class="fas fa-calendar-alt fa-lg"></i>
+                    </div> 
+                    Eventos
+                </a>
+            </div>          
+        </li>
+        <li class="nav-item active" routerLinkActive="active">
+            <div class="text-center">
+                <a class="nav-link" [routerLink]="['agricultura']">
+                    <div>
+                        <i class="fas fa-tree fa-lg"></i>
+                    </div> 
+                    Agricultura
+                </a>
+            </div>          
+        </li>
+        <li class="nav-item active"  routerLinkActive="active">
+                <div class="text-center">
+                    <a class="nav-link" [routerLink]="['costos']">
+                        <div>
+                            <i class="fas fa-coins fa-lg"></i>
+                        </div> 
+                        Costos
+                    </a>
+                </div>          
+            </li>
+      </ul>
+    </div>
+  </nav>

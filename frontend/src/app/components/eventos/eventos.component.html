@@ -1,0 +1,52 @@
+<div class="container m-5">
+    <div  class="container">
+        <button class="btn btn-primary" (click)="openModalEvento()"> Nuevo Evento</button>  
+    </div>
+    <div>        
+        <table class="table table-hover shadow-sm p-3 mb-5 bg-white rounded" style="background-color: white;" >     
+          <thead style="color: silver">                              
+            <tr>                           
+              <th scope="col">Categoria</th>
+              <th scope="col">Evento</th>                    
+              <th scope="col">Cantidad</th>
+              <th scope="col">Peso</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Archivos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let rebano of rebanos">    
+              <td><span style="text-transform: capitalize; font-weight: 500;">{{ rebano.category }}</span></td>           
+              <td>                 
+                <span class="badge badge-pill" 
+                  style=" height: 22px; font-weight: 500;"
+                  [ngClass]="{'green': rebano.event === 'ventas' || rebano.event ==='nacimientos', 
+                              'red': rebano.event == 'muertes', 
+                              'blue': rebano.event == 'compras', 
+                              'yellow': rebano.event == 'inventario inicial'}">                                                          
+                <i class="fas fa-circle fa-xs" style="font-size: 6px; padding-left: 50px; padding: 4px 0px 0px 3px; float: left;"></i>
+                    <span style="padding-left: 6px; padding-right: 7px;">{{ rebano.event}}</span>                                               
+                </span>
+              </td>              
+              <td>{{ rebano.quantity }}</td>
+              <td>{{ rebano.weight }}</td>
+              <td>{{ rebano.date }}</td>
+              <td><span *ngFor="let file of rebano.files" class="badge badge-info" style="margin-left: 5px;">{{file.fileNameText}}</span></td>
+            </tr>                
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="container m-5">
+  <div *ngFor="let item of fields; let i= index">
+    <label>{{ i+1 }}</label>
+    <input type="text" [disabled]="item.checkbox" name="somename" [(ngModel)]="item.textbox"/>
+   </div>
+   <button  class="btn btn-primary" (click)="addField()" style="margin-right: 5px;"><i class="fas fa-plus"></i></button>
+   <button  class="btn btn-primary"(click)="deleteField()" style="margin-right: 5px;"><i class="fas fa-minus"></i></button>
+   <button  class="btn btn-primary" (click)="saveField()" style="margin-right: 5px;"><i class="fas fa-save"></i></button>  
+</div>
+
+

@@ -1,0 +1,27 @@
+.red {
+    background-color: rgb(255, 227, 227);
+    color: rgb(224, 49, 49);
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.green {
+    background-color: rgb(211, 249, 216);
+    color: rgb(47, 158, 68);
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.yellow {
+    background-color: rgb(255, 243, 219);
+    color: rgb(240, 140, 0);
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.blue {
+    background-color: rgb(208, 235, 255);
+    color: rgb(25, 113, 194);
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
